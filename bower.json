@@ -1,0 +1,17 @@
+{
+  "name": "angular-to-do",
+  "homepage": "https://github.com/chase-ramsey/angular-to-do",
+  "authors": [
+    "Chase Ramsey <ramsey.chase@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
