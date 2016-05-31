@@ -1,4 +1,4 @@
-app.controller("TodoCtrl", function($scope) {
+app.controller("TodoCtrl", function($scope, $http) {
 
 	$scope.title = "Uberproductify!!";
 	$scope.textIN = "";
@@ -8,24 +8,10 @@ app.controller("TodoCtrl", function($scope) {
 	$scope.newTodo = "";
 	$scope.taskType = "home";
 
-	$scope.tasks = [
-		{
-			name: "Make the bed",
-			type: "home"
-		},
-		{
-			name: "Eat breakfast",
-			type: "home"
-		},
-		{
-			name: "Check the network",
-			type: "work"
-		},
-		{
-			name: "Start up Slack",
-			type: "work"
-		}
-	];
+	$http.get("/data/tasks.json")
+	.then((response) => {
+		$scope.tasks = response.data.tasks;
+	});
 
 	$scope.addTodo = () => {
 		$scope.tasks.push({name: $scope.newTodo, type: $scope.taskType});
