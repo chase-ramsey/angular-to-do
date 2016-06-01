@@ -11,11 +11,13 @@
     "**/.*",
     "node_modules",
     "bower_components",
+    "public/lib",
     "test",
     "tests"
   ],
   "dependencies": {
     "bootstrap": "^3.3.6",
-    "angular": "^1.5.6"
+    "angular": "^1.5.6",
+    "angular-route": "^1.5.6"
   }
 }
